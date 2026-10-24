@@ -529,6 +529,6 @@ func WaitForTerminatedProcess(t *testing.T, scraper *common.MetricsScraper, pid 
 		return 0, false
 	}
 
-	t.Logf("Found terminated PID=%d with energy=%.4f J", pid, energy)
+	t.Logf("Found terminated PID=%d with energy=%.4f J", pid, metric.Value)
 	return metric.Value, true
 }
